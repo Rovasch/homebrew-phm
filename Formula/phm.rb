@@ -18,6 +18,21 @@ class Phm < Formula
     bin.install "phm"
   end
 
+  def caveats
+    <<~EOS
+      Add the following to your shell config:
+
+      For zsh (~/.zshrc):
+        eval "$(phm env --shell zsh --use-on-cd)"
+
+      For bash (~/.bashrc):
+        eval "$(phm env --shell bash --use-on-cd)"
+
+      For fish (~/.config/fish/config.fish):
+        phm env --shell fish --use-on-cd | source
+    EOS
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/phm --version")
   end
