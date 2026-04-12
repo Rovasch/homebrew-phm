@@ -1,17 +1,17 @@
 class Phm < Formula
   desc "Fast PHP version manager for macOS"
   homepage "https://github.com/Rovasch/phm"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_arm do
     url "https://github.com/Rovasch/phm/releases/download/v#{version}/phm-aarch64-apple-darwin.tar.gz"
-    sha256 "0401569be07c5195c96cf56de144c8018b7aeda31dd5ae5b7c04652d3cb44920"
+    sha256 "063204ad788a54949dbf342c2013859c8db881157aff958870237e386b41cf82"
   end
 
   on_intel do
     url "https://github.com/Rovasch/phm/releases/download/v#{version}/phm-x86_64-apple-darwin.tar.gz"
-    sha256 "97bce3c07a51ab31939cfd041a3760608aeccfefc949de1a359edbf6f8d6f268"
+    sha256 "bbc7e3a139af3a6619607681020f050822c43e546ddd3f20a31cb4ef599d9137"
   end
 
   def install
