@@ -1,17 +1,17 @@
 class Phm < Formula
   desc "Fast PHP version manager for macOS"
   homepage "https://github.com/Rovasch/phm"
-  version "0.2.4"
+  version "0.2.5"
   license "MIT"
 
   on_arm do
     url "https://github.com/Rovasch/phm/releases/download/v#{version}/phm-aarch64-apple-darwin.tar.gz"
-    sha256 "c09d8c88ceb10435deb6b30f88baeca8b011293c1675dfeec274fdd44f4934b2"
+    sha256 "dbe609bf03137b7a083ca6b3aa7c1b3c63533fe2e59d607bc69eb808fe3bc7de"
   end
 
   on_intel do
     url "https://github.com/Rovasch/phm/releases/download/v#{version}/phm-x86_64-apple-darwin.tar.gz"
-    sha256 "856619428f973603d82dcbedd681dba5a178532f8e0d3e9bee923db3052d1103"
+    sha256 "98efc529469739fa8ba9dd840d0b3802f7b8581d6f803c18f7d1cc4d87e7f4c4"
   end
 
   def install
@@ -30,6 +30,9 @@ class Phm < Formula
 
       For fish (~/.config/fish/config.fish):
         phm env --shell fish --use-on-cd | source
+
+      For non-interactive shells (agents, CI, IDE terminals):
+        phm shim create
     EOS
   end
 
